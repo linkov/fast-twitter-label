@@ -6,7 +6,7 @@ Fast UILabel subclass that parses # hashtags, @ mentions and links using Twitter
 #Usage
 
 1. Create instance in code or from Xib
-2. Setup text and attributes:
+2. Setup text and attributes
 ```
 
         NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
@@ -17,7 +17,8 @@ Fast UILabel subclass that parses # hashtags, @ mentions and links using Twitter
         NSDictionary *hashtagAttributes = @{
                                             NSForegroundColorAttributeName:UIColorFromRGB(0x17a6d0),
                                             NSFontAttributeName: DinProRegular(18),
-                                            NSParagraphStyleAttributeName: paragrahStyle };
+                                            NSParagraphStyleAttributeName: paragrahStyle
+                                            };
 
         NSNumber *plainType = [NSNumber numberWithInt:SDWTwitterEntityTypePlain];
         NSDictionary *plainAttributes = @{NSForegroundColorAttributeName: UIColorFromRGB(0x555555),
@@ -26,14 +27,13 @@ Fast UILabel subclass that parses # hashtags, @ mentions and links using Twitter
                                           };
 [self.label showWithText:trimmedWhitespaceString attributes:@
 {
-
   hashtagType:hashtagAttributes,
   plainType:plainAttributes
 }];
                                                                                 
 ```
 
-3. Add detection block if needed:
+3. Add detection block if needed
 ```
     [self.label setDetectionBlock:^(SDWTwitterEntityType type, NSString *string) {
     // do your thing

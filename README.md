@@ -24,10 +24,12 @@ Fast UILabel subclass that parses # hashtags, @ mentions and links using Twitter
                                           NSFontAttributeName: DinProRegular(18),
                                           NSParagraphStyleAttributeName: paragrahStyle
                                           };
-[self.label showWithText:trimmedWhitespaceString attributes:@{
+[self.label showWithText:trimmedWhitespaceString attributes:@
+{
 
-                                                                             hashtagType:hashtagAttributes,
-                                                                                  plainType:plainAttributes}];
+  hashtagType:hashtagAttributes,
+  plainType:plainAttributes
+}];
                                                                                 
 ```
 

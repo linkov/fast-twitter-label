@@ -5,8 +5,8 @@ Fast UILabel subclass that parses # hashtags, @ mentions and links using Twitter
 
 #Usage
 
-1) Create instance in code or from Xib
-2) Setup text and attributes:
+1. Create instance in code or from Xib
+2. Setup text and attributes:
 ```
 
         NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
@@ -31,7 +31,7 @@ Fast UILabel subclass that parses # hashtags, @ mentions and links using Twitter
                                                                                 
 ```
 
-3) Add detection block if needed:
+3. Add detection block if needed:
 ```
     [self.label setDetectionBlock:^(SDWTwitterEntityType type, NSString *string) {
     // do your thing

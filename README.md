@@ -15,13 +15,13 @@ NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
 NSNumber *hashtagType = [NSNumber numberWithInt:SDWTwitterEntityTypeHashtag];
 NSDictionary *hashtagAttributes = @{
                                     NSForegroundColorAttributeName:UIColorFromRGB(0x17a6d0),
-                                    NSFontAttributeName: DinProRegular(18),
+                                    NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:18],
                                     NSParagraphStyleAttributeName: paragrahStyle
                                     };
 
 NSNumber *plainType = [NSNumber numberWithInt:SDWTwitterEntityTypePlain];
 NSDictionary *plainAttributes = @{NSForegroundColorAttributeName: UIColorFromRGB(0x555555),
-                                  NSFontAttributeName: DinProRegular(18),
+                                  NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:18],
                                   NSParagraphStyleAttributeName: paragrahStyle
                                   };
 [self.label showWithText:trimmedWhitespaceString attributes:@

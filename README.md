@@ -33,7 +33,7 @@ Fast UILabel subclass that parses # hashtags, @ mentions and links using Twitter
                                                                                 
 ```
 
-3. Add detection block if needed
+Add detection block if needed
 ```
     [self.label setDetectionBlock:^(SDWTwitterEntityType type, NSString *string) {
     // do your thing

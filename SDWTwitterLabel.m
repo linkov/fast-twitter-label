@@ -111,19 +111,23 @@
 - (NSDictionary *)defaultTextAttributes {
 
 	NSNumber *mentionType = [NSNumber numberWithInt:SDWTwitterEntityTypeScreenName];
-	NSDictionary *mentionAttributes = @{ NSForegroundColorAttributeName:[UIColor blueColor], NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:24] };
+	NSDictionary *mentionAttributes = @{ NSForegroundColorAttributeName:[UIColor darkGrayColor], NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:24] };
+	
+	NSNumber *urlType = [NSNumber numberWithInt:SDWTwitterEntityTypeURL];
+	NSDictionary *urlAttributes = @{ NSForegroundColorAttributeName:[UIColor darkGrayColor], NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:24] };
 
 	NSNumber *hashtagType = [NSNumber numberWithInt:SDWTwitterEntityTypeHashtag];
-	NSDictionary *hashtagAttributes = @{ NSForegroundColorAttributeName:[UIColor redColor], NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:24] };
+	NSDictionary *hashtagAttributes = @{ NSForegroundColorAttributeName:[UIColor darkGrayColor], NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:24] };
 
 	NSNumber *plainType = [NSNumber numberWithInt:SDWTwitterEntityTypePlain];
 	NSDictionary *plainAttributes = @{ NSForegroundColorAttributeName:[UIColor grayColor], NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:24] };
 
 
 	return @{
-			   hashtagType:hashtagAttributes,
-			   plainType:plainAttributes,
-			   mentionType:mentionAttributes
+		hashtagType:hashtagAttributes,
+		plainType:plainAttributes,
+		mentionType:mentionAttributes,
+		urlType:urlAttributes
             };
 }
 
